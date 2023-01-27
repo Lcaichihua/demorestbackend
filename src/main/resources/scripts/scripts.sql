@@ -38,3 +38,23 @@ Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 7','2500
 Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 8','2500','-5','1');
 Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 9','2500','19','1');
 Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 10','2500','19','1');
+
+
+   CREATE TABLE tbl_pedido
+   (ID_PEDIDO int(11) PRIMARY KEY,
+	ID_CLIENTE int(11) REFERENCES tbl_cliente(ID_CLIENTE),
+	GLOSA VARCHAR(240),
+	FECHA_REGISTRO timestamp DEFAULT CURRENT_TIMESTAMP,
+	TOTAL decimal(9,2),
+	ESTADO CHAR(1) DEFAULT '1'
+   );
+
+    CREATE TABLE tbl_pedido_detalle
+   (ID_PEDIDO_DETALLE int(11),
+	ID_PEDIDO int(11) REFERENCES tbl_pedido(ID_PEDIDO),
+	ID_PRODUCTO int(11)REFERENCES tbl_producto(ID_PRODUCTO),
+	CANTIDAD int(11),
+	PRECIO decimal(6,2),
+	SUB_TOTAL decimal(9,2),
+	ESTADO CHAR(1) DEFAULT '1'
+   );
