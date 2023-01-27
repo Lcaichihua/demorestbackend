@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestParam;
 import pe.com.caichihua.backrest.demorestbackend.controller.base.GenericREST;
-import pe.com.caichihua.backrest.demorestbackend.dto.ClienteDTO;
+import pe.com.caichihua.backrest.demorestbackend.dto.general.ClienteDTO;
 import pe.com.caichihua.backrest.demorestbackend.service.general.ClienteService;
 
 import static java.util.Objects.isNull;

@@ -8,7 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import pe.com.caichihua.backrest.demorestbackend.controller.base.GenericREST;
-import pe.com.caichihua.backrest.demorestbackend.dto.ProductoDTO;
+import pe.com.caichihua.backrest.demorestbackend.dto.general.ProductoDTO;
 import pe.com.caichihua.backrest.demorestbackend.service.general.ProductoService;
 
 import java.util.List;

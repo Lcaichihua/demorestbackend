@@ -2,7 +2,7 @@ package pe.com.caichihua.backrest.demorestbackend.mappers;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
-import pe.com.caichihua.backrest.demorestbackend.dto.ClienteDTO;
+import pe.com.caichihua.backrest.demorestbackend.dto.general.ClienteDTO;
 import pe.com.caichihua.backrest.demorestbackend.entity.general.ClienteEntity;
 
 import static java.util.Objects.isNull;

@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.com.caichihua.backrest.demorestbackend.dto.ClienteDTO;
+import pe.com.caichihua.backrest.demorestbackend.dto.general.ClienteDTO;
 import pe.com.caichihua.backrest.demorestbackend.entity.general.ClienteEntity;
 import pe.com.caichihua.backrest.demorestbackend.mappers.ClienteMapper;
 import pe.com.caichihua.backrest.demorestbackend.repository.ClienteRepository;

@@ -1,4 +1,4 @@
-package pe.com.caichihua.backrest.demorestbackend.dto;
+package pe.com.caichihua.backrest.demorestbackend.dto.general;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

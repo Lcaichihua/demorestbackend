@@ -3,7 +3,7 @@ package pe.com.caichihua.backrest.demorestbackend.service.general;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.com.caichihua.backrest.demorestbackend.dto.ProductoDTO;
+import pe.com.caichihua.backrest.demorestbackend.dto.general.ProductoDTO;
 import pe.com.caichihua.backrest.demorestbackend.entity.general.ProductoEntity;
 import pe.com.caichihua.backrest.demorestbackend.mappers.ProductoMapper;
 import pe.com.caichihua.backrest.demorestbackend.repository.ProductoRepository;
