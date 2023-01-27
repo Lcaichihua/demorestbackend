@@ -1,4 +1,4 @@
-package pe.com.caichihua.backrest.demorestbackend.repository;
+package pe.com.caichihua.backrest.demorestbackend.repository.general;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

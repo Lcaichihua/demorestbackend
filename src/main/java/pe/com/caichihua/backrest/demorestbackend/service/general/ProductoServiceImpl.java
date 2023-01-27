@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import pe.com.caichihua.backrest.demorestbackend.dto.general.ProductoDTO;
 import pe.com.caichihua.backrest.demorestbackend.entity.general.ProductoEntity;
 import pe.com.caichihua.backrest.demorestbackend.mappers.ProductoMapper;
-import pe.com.caichihua.backrest.demorestbackend.repository.ProductoRepository;
+import pe.com.caichihua.backrest.demorestbackend.repository.general.ProductoRepository;
 import pe.com.caichihua.backrest.demorestbackend.service.exceptions.ServiceException;
 
 import java.util.List;

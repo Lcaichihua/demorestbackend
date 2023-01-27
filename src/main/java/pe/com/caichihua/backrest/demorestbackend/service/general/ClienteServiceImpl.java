@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import pe.com.caichihua.backrest.demorestbackend.dto.general.ClienteDTO;
 import pe.com.caichihua.backrest.demorestbackend.entity.general.ClienteEntity;
 import pe.com.caichihua.backrest.demorestbackend.mappers.ClienteMapper;
-import pe.com.caichihua.backrest.demorestbackend.repository.ClienteRepository;
+import pe.com.caichihua.backrest.demorestbackend.repository.general.ClienteRepository;
 import pe.com.caichihua.backrest.demorestbackend.service.exceptions.ServiceException;
 
 @Service
