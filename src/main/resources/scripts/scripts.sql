@@ -41,7 +41,7 @@ Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 10','250
 
 
    CREATE TABLE tbl_pedido
-   (ID_PEDIDO int(11) PRIMARY KEY,
+   (ID_PEDIDO int(11) PRIMARY KEY AUTO_INCREMENT,
 	ID_CLIENTE int(11) REFERENCES tbl_cliente(ID_CLIENTE),
 	GLOSA VARCHAR(240),
 	FECHA_REGISTRO timestamp DEFAULT CURRENT_TIMESTAMP,
@@ -58,3 +58,7 @@ Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 10','250
 	SUB_TOTAL decimal(9,2),
 	ESTADO CHAR(1) DEFAULT '1'
    );
+
+
+  INSERT INTO tbl_pedido(ID_CLIENTE,GLOSA,TOTAL)
+  VALUES(1,'Orden demo',6090);
