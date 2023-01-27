@@ -50,7 +50,7 @@ Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 10','250
    );
 
     CREATE TABLE tbl_pedido_detalle
-   (ID_PEDIDO_DETALLE int(11),
+   (ID_PEDIDO_DETALLE int(11) AUTO_INCREMENT  PRIMARY KEY,
 	ID_PEDIDO int(11) REFERENCES tbl_pedido(ID_PEDIDO),
 	ID_PRODUCTO int(11)REFERENCES tbl_producto(ID_PRODUCTO),
 	CANTIDAD int(11),
@@ -62,3 +62,10 @@ Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 10','250
 
   INSERT INTO tbl_pedido(ID_CLIENTE,GLOSA,TOTAL)
   VALUES(1,'Orden demo',6090);
+
+ INSERT INTO tbl_pedido_detalle(ID_PEDIDO,ID_PRODUCTO,CANTIDAD,PRECIO,SUB_TOTAL)
+VALUES( 1,1,3,30,90);
+INSERT INTO tbl_pedido_detalle(ID_PEDIDO,ID_PRODUCTO,CANTIDAD,PRECIO,SUB_TOTAL)
+VALUES(1,2,1,6000,6000);
+
+
