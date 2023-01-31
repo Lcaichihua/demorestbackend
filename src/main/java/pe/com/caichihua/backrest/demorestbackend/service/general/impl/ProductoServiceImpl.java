@@ -1,4 +1,4 @@
-package pe.com.caichihua.backrest.demorestbackend.service.general;
+package pe.com.caichihua.backrest.demorestbackend.service.general.impl;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +8,7 @@ import pe.com.caichihua.backrest.demorestbackend.entity.general.ProductoEntity;
 import pe.com.caichihua.backrest.demorestbackend.mappers.ProductoMapper;
 import pe.com.caichihua.backrest.demorestbackend.repository.general.ProductoRepository;
 import pe.com.caichihua.backrest.demorestbackend.service.exceptions.ServiceException;
+import pe.com.caichihua.backrest.demorestbackend.service.general.service.ProductoService;
 
 import java.util.List;
 import java.util.Optional;

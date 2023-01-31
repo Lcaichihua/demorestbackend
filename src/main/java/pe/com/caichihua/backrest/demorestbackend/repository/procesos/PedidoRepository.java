@@ -6,16 +6,17 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import pe.com.caichihua.backrest.demorestbackend.entity.general.ClienteEntity;
+import pe.com.caichihua.backrest.demorestbackend.entity.procesos.PedidoEntity;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
 
 @Repository
-public interface PedidoRepository extends JpaRepository<ClienteEntity, Long>{
+public interface PedidoRepository extends JpaRepository<PedidoEntity, Long>{
 
-	@Query("select c from Cliente c where upper(c.glosa) like upper(:glosa) and c.estado='1'")
-	List<ClienteEntity> findByLikeGlosa(@Param("glosa") String glosa);
+	@Query("select c from PedidoEntity c where upper(c.glosa) like upper(:glosa) and c.estado='1'")
+	List<PedidoEntity> findByLikeGlosa(@Param("glosa") String glosa);
 	
 	@Transactional
 	@Modifying

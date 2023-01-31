@@ -1,4 +1,4 @@
-package pe.com.caichihua.backrest.demorestbackend.service.general;
+package pe.com.caichihua.backrest.demorestbackend.service.general.service;
 
 import pe.com.caichihua.backrest.demorestbackend.dto.general.ProductoDTO;
 import pe.com.caichihua.backrest.demorestbackend.service.base.GenericService;
