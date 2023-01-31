@@ -68,7 +68,57 @@ public class PedidoServiceImpl implements PedidoService {
 
     @Override
     public PedidoDTO save(PedidoDTO pedidoDTO) throws ServiceException {
-        return null;
+        try {
+
+            PedidoEntity pedidoEntity = pedidoMapper.toEntity(pedidoDTO);
+
+            List<PedidoDetalleEntity> listPedidoDetalleEntity = new ArrayList<>();
+
+            // Detalle Pedido
+            pedidoDTO.getDetalle().forEach(dp -> {
+
+                // Buscando el producto
+
+                PedidoDetalleEntity pedidoDetalleEntity = pedidoDetalleMapper.toEntity(dp);
+
+                Optional<ProductoEntity> optProductoEntity = productoRepository.findById(dp.getProducto().getId());
+
+                if (optProductoEntity.isPresent()) {
+
+                    ProductoEntity producto = optProductoEntity.get();
+
+                    pedidoDetalleEntity.setProducto(productoMapper.toEntity(dp.getProducto()));
+
+                    pedidoDetalleEntity.setPrecio(producto.getPrecio());
+                    pedidoDetalleEntity.calcularSubTotal();
+                    pedidoDetalleEntity.setPedido(pedidoEntity);
+
+                    pedidoDetalleEntity.setEstado("1");
+
+                    listPedidoDetalleEntity.add(pedidoDetalleEntity);
+
+                    // Actualizar la tabla producto
+
+                    //productoRepository.updataStock(producto.getId(), dp.getCantidad());
+                }
+
+            });
+
+            pedidoEntity.setDetalle(listPedidoDetalleEntity);
+
+            pedidoEntity.calcularSubTotal();
+
+            pedidoEntity.setEstado("1");
+
+            pedidoRepository.saveAndFlush(pedidoEntity);
+
+           // pedidoCustomRepository.refresh(pedidoEntity);
+
+            return pedidoMapper.toDTO(pedidoEntity);
+
+        } catch (Exception e) {
+            throw new ServiceException(e);
+        }
     }
 
 
