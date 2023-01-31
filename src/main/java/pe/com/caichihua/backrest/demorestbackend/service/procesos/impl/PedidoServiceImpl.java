@@ -99,7 +99,7 @@ public class PedidoServiceImpl implements PedidoService {
 
                     // Actualizar la tabla producto
 
-                    //productoRepository.updataStock(producto.getId(), dp.getCantidad());
+
                 }
 
             });
