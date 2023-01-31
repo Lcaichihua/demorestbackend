@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import pe.com.caichihua.backrest.demorestbackend.dto.general.ClienteDTO;
+import pe.com.caichihua.backrest.demorestbackend.entity.general.ClienteEntity;
 
 @Builder
 @NoArgsConstructor
@@ -24,7 +25,7 @@ public class PedidoDTO {
 
     private String estado;
 
-    private ClienteDTO cliente;
+    private ClienteEntity cliente;
 
     private List<PedidoDetalleDTO> detalle;
 
