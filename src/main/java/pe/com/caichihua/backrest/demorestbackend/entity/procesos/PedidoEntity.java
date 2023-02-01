@@ -61,7 +61,7 @@ public class PedidoEntity {
     @NotNull(message = "El cliente es requerido")
     @ManyToOne
     @JoinColumn(name = "ID_CLIENTE", nullable = false)
-    private ClienteEntity cliente;
+        private ClienteEntity cliente;
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
     @Where(clause = "estado='1'")
