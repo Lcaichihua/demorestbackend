@@ -72,7 +72,7 @@ public class PedidoServiceImpl implements PedidoService {
 
             PedidoEntity pedidoEntity = pedidoMapper.toEntity(pedidoDTO);
 
-            List<PedidoDetalleEntity> li    stPedidoDetalleEntity = new ArrayList<>();
+            List<PedidoDetalleEntity> listPedidoDetalleEntity = new ArrayList<>();
 
             // Detalle Pedido
             pedidoDTO.getDetalle().forEach(dp -> {
