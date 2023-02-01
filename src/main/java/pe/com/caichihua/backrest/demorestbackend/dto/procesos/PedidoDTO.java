@@ -25,7 +25,7 @@ public class PedidoDTO {
 
     private String estado;
 
-    private ClienteEntity cliente;
+    private ClienteDTO cliente;
 
     private List<PedidoDetalleDTO> detalle;
 

@@ -35,6 +35,7 @@ public class PedidoMapper {
 
         BeanUtils.copyProperties(pedidoEntity, pedidoDTO);
 
+        pedidoDTO.setCliente(clienteMapper.toDTO(pedidoEntity.getCliente()));
         pedidoDTO.setDetalle(new ArrayList<>());
 
         pedidoEntity.getDetalle().forEach(pd -> {
