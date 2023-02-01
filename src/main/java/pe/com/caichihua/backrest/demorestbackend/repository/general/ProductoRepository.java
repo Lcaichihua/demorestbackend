@@ -24,4 +24,8 @@ public interface ProductoRepository extends JpaRepository<ProductoEntity, Long>{
 	@Modifying
 	@Query(nativeQuery = true, value = "UPDATE TBL_PRODUCTO SET ESTADO='0' WHERE ID_PRODUCTO=:id")
 	void delete(@Param("id") Long id);
+
+	@Modifying
+	@Query("update ProductoEntity set stock=stock - :cantidad where id=:id") // JPQL
+	void updataStock(@Param("id") Long id, @Param("cantidad") Integer stock);
 }
