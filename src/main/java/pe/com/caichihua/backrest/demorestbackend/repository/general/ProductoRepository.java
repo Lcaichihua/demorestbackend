@@ -5,9 +5,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import pe.com.caichihua.backrest.demorestbackend.entity.general.ClienteEntity;
 import pe.com.caichihua.backrest.demorestbackend.entity.general.ProductoEntity;
-
 import javax.transaction.Transactional;
 import java.util.List;
 
