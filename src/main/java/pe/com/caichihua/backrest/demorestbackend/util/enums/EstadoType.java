@@ -15,4 +15,5 @@ public enum EstadoType {
     public String getNombre() {
         return nombre;
     }
+
 }

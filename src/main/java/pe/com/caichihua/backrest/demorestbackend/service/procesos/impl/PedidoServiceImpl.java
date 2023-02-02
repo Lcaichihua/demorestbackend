@@ -18,6 +18,7 @@ import pe.com.caichihua.backrest.demorestbackend.repository.general.ProductoRepo
 import pe.com.caichihua.backrest.demorestbackend.repository.procesos.PedidoRepository;
 import pe.com.caichihua.backrest.demorestbackend.service.exceptions.ServiceException;
 import pe.com.caichihua.backrest.demorestbackend.service.procesos.service.PedidoService;
+import pe.com.caichihua.backrest.demorestbackend.util.enums.EstadoType;
 
 @Slf4j
 @Service
@@ -105,7 +106,7 @@ public class PedidoServiceImpl implements PedidoService {
 
             pedidoEntity.calcularSubTotal();
 
-            pedidoEntity.setEstado("1");
+            pedidoEntity.setEstado(String.valueOf(EstadoType.ACTIVO.getClave()));
 
             pedidoRepository.saveAndFlush(pedidoEntity);
 
