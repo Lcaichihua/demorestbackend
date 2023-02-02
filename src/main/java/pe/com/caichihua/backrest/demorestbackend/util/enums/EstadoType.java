@@ -16,4 +16,7 @@ public enum EstadoType {
         return nombre;
     }
 
+    public int getClave() {
+        return clave;
+    }
 }
