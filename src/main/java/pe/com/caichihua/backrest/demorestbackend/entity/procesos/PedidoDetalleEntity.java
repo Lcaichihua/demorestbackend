@@ -31,7 +31,7 @@ public class PedidoDetalleEntity implements Serializable {
     private static final long serialVersionUID = -5467458619551056586L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_PEDIDO_DETALLE")
     private Long id;
 

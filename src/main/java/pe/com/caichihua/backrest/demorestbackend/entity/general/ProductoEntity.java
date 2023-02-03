@@ -17,7 +17,7 @@ import javax.validation.constraints.Size;
 public class ProductoEntity {
     @Id
     @Column(name = "ID_PRODUCTO")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Size(min = 10, max = 120, message = "El nombre debe tener como mínimo {min} y máximo {max} caracteres")

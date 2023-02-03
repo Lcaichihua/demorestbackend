@@ -39,8 +39,8 @@ import static java.util.Objects.isNull;
 public class PedidoEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID_PEDIDO")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Size(min = 10, max = 240, message = "La glosa es requerido y debe tener como mínimo {min} y máximo {max} caracteres")
