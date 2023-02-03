@@ -2,6 +2,8 @@ package pe.com.caichihua.backrest.demorestbackend.service.general.impl;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import pe.com.caichihua.backrest.demorestbackend.dto.general.ProductoDTO;
 import pe.com.caichihua.backrest.demorestbackend.entity.general.ProductoEntity;
@@ -82,5 +84,15 @@ public class ProductoServiceImpl implements ProductoService {
 	@Override
 	public Boolean actualizarStock(Long id, Double stock) throws ServiceException {
 		return null;
+	}
+
+	@Override
+	public List<ProductoDTO> findByLikeNombrePagin(Pageable pageable, String nombre) throws ServiceException {
+
+		Page<ProductoEntity> lstProductoEntities = productoRepository.findByLikeNombrePagin(pageable, "%" + nombre + "%");
+
+		List<ProductoDTO> lstProductoDTOs= lstProductoEntities.getContent().stream().map(c -> productoMapper.toDTO(c)).collect(Collectors.toList());
+
+		return lstProductoDTOs;
 	}
 }
