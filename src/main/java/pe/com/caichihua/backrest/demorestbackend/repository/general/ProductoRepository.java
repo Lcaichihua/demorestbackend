@@ -1,5 +1,7 @@
 package pe.com.caichihua.backrest.demorestbackend.repository.general;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -26,4 +28,8 @@ public interface ProductoRepository extends JpaRepository<ProductoEntity, Long>{
 	@Modifying
 	@Query("update ProductoEntity set stock=stock - :cantidad where id=:id") // JPQL
 	void updataStock(@Param("id") Long id, @Param("cantidad") Integer stock);
+
+	@Query("select c from ProductoEntity c where upper(c.nombre) like upper(:nombre) and c.estado='1'")
+	Page<ProductoEntity> findByLikeNombrePagin(Pageable pageable, @Param("nombre") String nombre);
+
 }
