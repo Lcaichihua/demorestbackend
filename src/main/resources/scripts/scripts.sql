@@ -39,6 +39,28 @@ Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 8','2500
 Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 9','2500','19','1');
 Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 10','2500','19','1');
 
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('sadsdad 1','2500','90','0');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('sadsadas 2','2500','16','0');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('dd 3','500','14','0');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('sdsd 4','2500','5','1');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('sdsdsdsd 5','2500','16','1');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 6','2500','19','1');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('dd 7','2500','19','1');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('sds 8','2500','-5','1');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('dsd 9','2500','19','1');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('sdsd 10','2500','19','1');
+
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('dsd 1','2500','90','0');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('sd 2','2500','16','0');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('refrhghg 3','500','14','0');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('sd 4','2500','5','1');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('ds 5','2500','16','1');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('sdsdsd 6','2500','19','1');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('sd 7','2500','19','1');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('Producto 8','2500','-5','1');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('sds 9','2500','19','1');
+Insert into tbl_producto (NOMBRE,PRECIO,STOCK,ESTADO) values ('sdsd 10','2500','19','1');
+
 
    CREATE TABLE tbl_pedido
    (ID_PEDIDO int(11) PRIMARY KEY AUTO_INCREMENT,
