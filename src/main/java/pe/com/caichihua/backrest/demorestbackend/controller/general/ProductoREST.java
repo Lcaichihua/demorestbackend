@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -113,6 +115,29 @@ public class ProductoREST extends GenericREST {
 			log.info("size -> " + size);
 
 			Pageable pageable = PageRequest.of(page-1, size);
+
+			List<ProductoDTO> productos = productoService.findByLikeNombrePagin(pageable,nombre);
+			if (isNull(productos) || productos.isEmpty()) {
+				return ResponseEntity.noContent().build();
+			}
+			return ResponseEntity.ok(productos);
+		} catch (Exception e) {
+			log.error(e.getMessage(), e);
+			return ResponseEntity.internalServerError().build();
+		}
+	}
+	@GetMapping("/nombre-pagin-order")
+	public ResponseEntity<?> findByLikeNombrePaginOrder( 	@RequestParam(value = "page", defaultValue = "1") Integer page,
+															@RequestParam(value = "size", defaultValue = "10") Integer size,
+															@RequestParam(value = "field", defaultValue = "id") String field,
+															@RequestParam(value = "order", defaultValue = "ASC") String order,
+															@RequestParam(value = "nombre", defaultValue = "") String nombre) {
+		try {
+			log.info("nombre -> " + nombre);
+			log.info("page -> " + page);
+			log.info("size -> " + size);
+
+			Pageable pageable = PageRequest.of(page-1, size, Sort.by(Direction.valueOf(order), field));
 
 			List<ProductoDTO> productos = productoService.findByLikeNombrePagin(pageable,nombre);
 			if (isNull(productos) || productos.isEmpty()) {
