@@ -37,7 +37,7 @@ public class UsuarioEntity {
     private String usuario;
 
     @NotNull(message = "La clave es requerida")
-    @Size(min = 6, max = 20, message = "La clave debe tener como mínimo {min} y {max} caracteres")
+    @Size(min = 6, max = 80, message = "La clave debe tener como mínimo {min} y {max} caracteres")
     @Column(name = "CLAVE")
     private String clave;
 
