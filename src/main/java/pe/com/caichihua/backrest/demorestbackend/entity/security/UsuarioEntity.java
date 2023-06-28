@@ -28,8 +28,7 @@ import lombok.Data;
 public class UsuarioEntity {
     @Id
     @Column(name = "ID_USUARIO")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seqUsuario")
-    @SequenceGenerator(sequenceName = "SEQ_USUARIO", allocationSize = 1, name = "seqUsuario")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull(message = "El usuario es requerido")
